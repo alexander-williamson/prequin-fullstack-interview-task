@@ -2,9 +2,11 @@
 
 Hello! If you are reading this, then we're in the process of chatting with you about a technical role at Preqin. Congratulations!
 
-To move forward, we'd like to know a bit about how you work. We'd like you to demonstrate your skills and abilities. Below is a user story that reflects with work you will be doing at Preqin day to day. We would like you to deliver an e2e functional MVP of the feature, try to limit yourself to 2-3hours.
+To move forward, we'd like to know a bit about how you work. We'd like you to demonstrate your skills and abilities. Below is a user story that reflects with work you will be doing at Preqin day to day. We would like you to deliver an e2e functional prototype of the feature.
 
-You'll then have the opportunity to showcase your work to some of our engineering team, discuss your solution, explain what you might do differently with more time, and answer any questions.
+Try to limit yourself to around 3 hours, we would like to see how you find balance to get a working prototype.
+
+You'll then showcase your work to some of our engineering team and discuss your solution, how you found balance to deliver a functional prototype and how you would do it diffrently on a production ready system.
 
 This exercise is not graded or scored; it is designed to give us a sample of your thought processes as an engineer.
 
@@ -30,15 +32,23 @@ Note: Assume a sole currency of GBP, and ignore any authentication needs.
 
 ## Technical Requirements
 
-The solution is completely open but some technical specifications need to be met:
+The solution is completely open but we would like you to think and show knowledge about these layers of a software system:
 
-1. Data Layer: You must use a relational database and model the entities accordingly. We recommend `SQLite` so that you can include the database as a file with your code.
+1. Data Layer: how to store the data.
 
-2. Backend Service: Data must be served to the consumers via an API service.
+2. Backend Services: how to provide data to consumers via a contractual API.
 
-3. Webapp: A web application should consume and visualize the data from your api.
+3. Web app: how to consume and visualize data from API services.
 
-Note: You are free to use any language and frameworks. Out tech stack consists of: React micro frontends (newer ones with typescript, older ones without), Python micro services (some using REST/FastAPI others using GQL/Strawberry), and .NET (C#) for our legacy services. Bonus if you use any of these.
+Notes:
+- You are free to use any language and frameworks. 
+- Out tech stack consists of: 
+  - React micro frontends (newer ones with typescript, older ones without),
+  - Python micro services (some using REST/FastAPI others using GQL/Strawberry), 
+  - .NET (C#) for our legacy services,
+  - Postgres and MSSQL databases
+- It would be nice for you to demonstrate if you are skilled in any of these.
+- `SQLite` is a quick an easy way to include a database as a file with your code.
 
 ## Submitting your solution
 
