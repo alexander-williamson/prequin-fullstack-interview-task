@@ -25,10 +25,9 @@ I want to see relevant commitments.
 
 Sample data is provided in `data.csv`.
 
-How you visualise the data is up to you, but we include some wireframes just in case you want some guidance:
-![Investors Listing](./wireframe-investors.png) ![Commitments Breakdown](./wireframe-investor-commitments.png)
+How you visualise the data is up to you, if you need guidance there are some wireframes in the repo.
 
-Note: Assume a sole currency of GBP, and ignore any authentication needs.
+Assume a sole currency of GBP, and ignore any authentication needs.
 
 ## Technical Requirements
 
