@@ -38,7 +38,7 @@ The solution is completely open but we would like you to think and show knowledg
 
 2. Backend Services: how to provide data to consumers via a contractual API.
 
-3. Web app: how to consume and visualize data from API services.
+3. Web applications: how to consume and visualize data from API services on the web.
 
 Notes:
 - You are free to use any language and frameworks. 
