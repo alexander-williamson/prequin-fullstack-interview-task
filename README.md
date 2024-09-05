@@ -47,7 +47,8 @@ The solution is completely open but we would like you to think and show knowledg
   2. Python micro services (some using REST/FastAPI others using GQL/Strawberry), 
   3. .NET (C#) for our legacy services
   4. Postgres and MSSQL databases
-- It would be nice for you to demonstrate if you are skilled in any of these.
+- It would be nice for you to demonstrate if you are skilled in any of these
+- It would also be nice for you to show some samples of how you would test your code
 - `SQLite` is a quick an easy way to include a database as a file with your code.
 
 ## Submitting your solution
