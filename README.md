@@ -7,6 +7,7 @@ To move forward, we'd like to know a bit about how you work. We'd like you to de
 Try to limit yourself to around 3 hours, we would like to see how you find balance to get a working prototype.
 
 You'll then showcase your work to some of our engineering team and discuss your solution, how you found balance to deliver a functional prototype and how you would do it diffrently on a production ready system.
+Please be prepared to share your screen, demo your prototype on the browser and walk us through your code.
 
 This exercise is not graded or scored; it is designed to give us a sample of your thought processes and skill set as an engineer.
 
