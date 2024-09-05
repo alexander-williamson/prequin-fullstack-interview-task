@@ -40,13 +40,14 @@ The solution is completely open but we would like you to think and show knowledg
 
 3. Web applications: how to consume and visualize data from API services on the web.
 
-Notes:
+**Notes:**
+
 - You are free to use any language and frameworks. 
-- Out tech stack consists of: 
-  - React micro frontends (newer ones with typescript, older ones without),
-  - Python micro services (some using REST/FastAPI others using GQL/Strawberry), 
-  - .NET (C#) for our legacy services,
-  - Postgres and MSSQL databases
+- Out tech stack consists of:
+  1. React micro frontends (newer ones with typescript, older ones without),
+  2. Python micro services (some using REST/FastAPI others using GQL/Strawberry), 
+  3. .NET (C#) for our legacy services
+  4. Postgres and MSSQL databases
 - It would be nice for you to demonstrate if you are skilled in any of these.
 - `SQLite` is a quick an easy way to include a database as a file with your code.
 
