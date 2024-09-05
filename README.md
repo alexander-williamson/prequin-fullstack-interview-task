@@ -8,7 +8,7 @@ Try to limit yourself to around 3 hours, we would like to see how you find balan
 
 You'll then showcase your work to some of our engineering team and discuss your solution, how you found balance to deliver a functional prototype and how you would do it diffrently on a production ready system.
 
-This exercise is not graded or scored; it is designed to give us a sample of your thought processes as an engineer.
+This exercise is not graded or scored; it is designed to give us a sample of your thought processes and skill set as an engineer.
 
 ## The User Story
 
@@ -23,33 +23,28 @@ When I click on an Asset Class
 I want to see relevant commitments.
 ```
 
-Sample data is provided in `data.csv`.
+Sample data is provided in `data.csv`. Assume a sole currency of GBP, and ignore any authentication needs.
 
 How you visualise the data is up to you, if you need guidance there are some wireframes in the repo.
 
-Assume a sole currency of GBP, and ignore any authentication needs.
-
 ## Technical Requirements
 
-The solution is completely open but we would like you to think and show knowledge about these layers of a software system:
+The solution is completely open (you are free to use any language and frameworks).
+However we would like you to think and show knowledge of the following layers of a software system:
 
 1. Data Layer: how to store the data.
-
 2. Backend Services: how to provide data to consumers via a contractual API.
-
 3. Web applications: how to consume and visualize data from API services on the web.
 
-**Notes:**
+It would also be nice for you to show some samples of how you would test the software, but don't worry about coverage.
 
-- You are free to use any language and frameworks. 
-- Our tech stack consists of:
+**Notes:**
+ 
+Ideally you should demonstrate knowledge of some our our tech stack, which consists of:
   1. React micro frontends (newer ones with typescript, older ones without),
   2. Python micro services (some using REST/FastAPI others using GQL/Strawberry), 
-  3. .NET (C#) for our legacy services
-  4. Postgres and MSSQL databases
-- It would be nice for you to demonstrate if you are skilled in any of these
-- It would also be nice for you to show some samples of how you would test your code
-- `SQLite` is a quick an easy way to include a database as a file with your code.
+  3. C#/.NET for our legacy services
+  4. Postgres and MSSQL databases (`SQLite` is a quick and easy way to include a database as a file with your code)
 
 ## Submitting your solution
 
