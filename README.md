@@ -41,10 +41,11 @@ It would also be nice for you to show some samples of how you would test the sof
 **Notes:**
  
 Ideally you should demonstrate knowledge of some our our tech stack, which consists of:
-  1. React micro frontends (newer ones with typescript, older ones without),
-  2. Python micro services (some using REST/FastAPI others using GQL/Strawberry), 
-  3. C#/.NET for our legacy services
-  4. Postgres and MSSQL databases (`SQLite` is a quick and easy way to include a database as a file with your code)
+
+- React micro frontends (newer ones with typescript, older ones without),
+- Python micro services (some using REST/FastAPI others using GQL/Strawberry), 
+- C#/.NET for our legacy services
+- Postgres, MSSQL and Mongo databases (`SQLite` is a quick and easy way to include a database as a file with your code)
 
 ## Submitting your solution
 
