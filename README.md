@@ -42,7 +42,7 @@ The solution is completely open but we would like you to think and show knowledg
 **Notes:**
 
 - You are free to use any language and frameworks. 
-- Out tech stack consists of:
+- Our tech stack consists of:
   1. React micro frontends (newer ones with typescript, older ones without),
   2. Python micro services (some using REST/FastAPI others using GQL/Strawberry), 
   3. .NET (C#) for our legacy services
