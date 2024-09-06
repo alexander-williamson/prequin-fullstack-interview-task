@@ -2,14 +2,14 @@
 
 Hello! If you are reading this, then we're in the process of chatting with you about a technical role at Preqin. Congratulations!
 
-To move forward, we'd like to know a bit about how you work. We'd like you to demonstrate your skills and abilities. Below is a user story that reflects with work you will be doing at Preqin day to day. We would like you to deliver an e2e functional prototype of the feature.
+To move forward, we'd like to know a bit about how you work. We'd like you to demonstrate your skills and abilities. 
 
-Try to limit yourself to around 3 hours, we would like to see how you find balance to get a working prototype.
+Below is a user story that reflects with work you will be doing at Preqin day to day. 
+We would like you to deliver what you consider to be a finished product.
 
-You'll then showcase your work to some of our engineering team and discuss your solution, how you found balance to deliver a functional prototype and how you would do it diffrently on a production ready system.
-Please be prepared to share your screen, demo your prototype on the browser and walk us through your code.
+Most candidates spend about 3 hours on the exercise. Please don't spend more than 5.
 
-This exercise is not graded or scored; it is designed to give us a sample of your thought processes and skill set as an engineer.
+You'll then showcase your work to some of our engineering team and discuss your solution. Please be prepared to share your screen, demo your app on the browser and walk us through your code.
 
 ## The User Story
 
@@ -19,14 +19,13 @@ The aim is to fulfill the following user story:
 As a Preqin user,
 I want to see a list of investors, their details and the total of their commitments.
 When I click on an investor,
-I want to see a breakdown of their commitments.
-When I click on an Asset Class
-I want to see relevant commitments.
+I want to see a breakdown of their commitments
+And be able to filter by Asset Class.
 ```
 
 Sample data is provided in `data.csv`. Assume a sole currency of GBP, and ignore any authentication needs.
 
-How you visualise the data is up to you, if you need guidance there are some wireframes in the repo.
+How you visualise the data is up to you, if you need guidance there are some optional wireframes in the repo.
 
 ## Technical Requirements
 
@@ -36,10 +35,6 @@ However we would like you to think and show knowledge of the following layers of
 1. Data Layer: how to store the data.
 2. Backend Services: how to provide data to consumers via a contractual API.
 3. Web applications: how to consume and visualize data from API services on the web.
-
-It would also be nice for you to show some samples of how you would test the software, but don't worry about coverage.
-
-**Notes:**
  
 Ideally you should demonstrate knowledge of some our our tech stack, which consists of:
 
