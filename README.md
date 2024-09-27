@@ -1,13 +1,8 @@
 # Preqin Technical Interview
 
-Hello! If you are reading this, then we're in the process of chatting with you about a technical role at Preqin. Congratulations!
+Hello! If you are reading this, then we're in the process of chatting with you about a technical role at Preqin. Congratulations! To move forward, we'd like to know a bit about how you work. We'd like you to demonstrate your skills and abilities. 
 
-To move forward, we'd like to know a bit about how you work. We'd like you to demonstrate your skills and abilities. 
-
-Below is a user story that reflects with work you will be doing at Preqin day to day. 
-We would like you to deliver what you consider to be a finished product.
-
-Most candidates spend about 3 hours on the exercise. Please don't spend more than 5.
+Below is a user story that reflects with work you will be doing at Preqin day to day. **We would like you to deliver what you consider to be a finished product.** Most candidates spend around 3 hours on the exercise, please do not spend more than 5 hours.
 
 You'll then showcase your work to some of our engineering team and discuss your solution. Please be prepared to share your screen, demo your app on the browser and walk us through your code.
 
@@ -17,10 +12,10 @@ The aim is to fulfill the following user story:
 
 ```
 As a Preqin user,
-I want to see a list of investors, their details and the total of their commitments.
-When I click on an investor,
+I want to see a list of investors and the total of their commitments.
+When I select an investor,
 I want to see a breakdown of their commitments
-And be able to filter by Asset Class.
+And be able to filter them by Asset Class.
 ```
 
 Sample data is provided in `data.csv`. Assume a sole currency of GBP, and ignore any authentication needs.
