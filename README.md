@@ -31,11 +31,11 @@ However we would like you to think and show knowledge of the following layers of
 2. Backend Services: how to provide data to consumers via a contractual API.
 3. Web applications: how to consume and visualize data from API services on the web.
  
-Ideally you should demonstrate knowledge of some our our tech stack, which consists of:
+Ideally you should demonstrate knowledge of some of the tech stack used across our teams, which includes:
 
 - React micro frontends (newer ones with typescript, older ones without),
 - Python micro services (some using REST/FastAPI others using GQL/Strawberry), 
-- C#/.NET for our legacy services
+- C#/.NET backend APIs
 - Postgres, MSSQL and Mongo databases (`SQLite` is a quick and easy way to include a database as a file with your code)
 
 ## Submitting your solution
