@@ -4,6 +4,7 @@ import Koa, { Context, Next } from "koa";
 import bodyParser from "koa-bodyparser";
 import { configuration } from "./Configuration";
 import { SetOK } from "./ResponseHelpers";
+import { GetDashboardHandler } from "./handlers/GetDashboardHandler";
 
 const app = new Koa();
 
@@ -18,9 +19,7 @@ app.use(async (ctx: Context, next: Next) => {
 
 // handlers
 const router = new Router({});
-router.get("/v1/dashboard", (ctx: Context) => {
-  SetOK(ctx, {});
-});
+router.get("/v1/dashboard", GetDashboardHandler());
 router.post("/v1/investments/search", (ctx: Context) => {
   SetOK(ctx, {});
 });
