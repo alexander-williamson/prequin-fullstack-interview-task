@@ -23,7 +23,7 @@ export class GetInvestmentSummariesQueryHandler implements IQueryHander<Query, R
 }
 
 type Query = {
-  investorIds?: string[];
+  investorIds: string[];
   paging: {
     pageOffset: number;
     pageSize: number;

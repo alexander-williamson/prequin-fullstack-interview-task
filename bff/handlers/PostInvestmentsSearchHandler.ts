@@ -8,21 +8,19 @@ const getInvestmentSummariesQueryHandler = new GetInvestmentSummariesQueryHandle
 
 export function PostInvestmentsSearchHandler(): Middleware {
   return async function Handler(ctx: Context): Promise<void> {
-    const { error, value } = ValidateBody<RequestBody>(ctx, requestBodyValidator);
+    const { error, value } = ValidateBody<PostInvestmentsSearchRequestBody>(ctx, requestBodyValidator);
     if (error) {
       SetBadRequest(ctx, "VALIDATION_ERROR", error.message);
       return;
     }
-
     const results = await getInvestmentSummariesQueryHandler.handle({
-      investorIds: (value as RequestBody).investorIds,
+      investorIds: (value as PostInvestmentsSearchRequestBody).investorIds,
       paging: {
-        pageOffset: (value as RequestBody).paging?.pageOffset ?? 0,
-        pageSize: (value as RequestBody).paging?.pageSize ?? 15,
+        pageOffset: (value as PostInvestmentsSearchRequestBody).paging?.pageOffset ?? 0,
+        pageSize: (value as PostInvestmentsSearchRequestBody).paging?.pageSize ?? 15,
       },
     });
-
-    const body: ResponseBody = {
+    const body: PostInvestmentsSearchResponseBody = {
       results: results.investments.map((item) => ({
         id: item.id,
         investorId: item.investorId,
@@ -42,8 +40,8 @@ export function PostInvestmentsSearchHandler(): Middleware {
 }
 
 const requestBodyValidator = joi
-  .object<RequestBody>({
-    investorIds: joi.array().items(joi.string().required()).min(1).optional(),
+  .object<PostInvestmentsSearchRequestBody>({
+    investorIds: joi.array().items(joi.string().required()).min(1).required(),
     paging: joi
       .object({
         pageOffset: joi.number().min(0).required(),
@@ -53,7 +51,15 @@ const requestBodyValidator = joi
   })
   .required();
 
-type ResponseBody = {
+type PostInvestmentsSearchRequestBody = {
+  investorIds: string[];
+  paging?: {
+    pageOffset: number;
+    pageSize: number;
+  };
+};
+
+type PostInvestmentsSearchResponseBody = {
   results: {
     id: string;
     investorId: string;
@@ -65,13 +71,5 @@ type ResponseBody = {
     pageOffset: number;
     pageSize: number;
     totalCount: number;
-  };
-};
-
-type RequestBody = {
-  investorIds?: string[];
-  paging?: {
-    pageOffset: number;
-    pageSize: number;
   };
 };

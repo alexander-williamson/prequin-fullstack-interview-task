@@ -36,7 +36,11 @@ describe("dashboard", () => {
     mockQuery.mockImplementationOnce(async () => [[BuildInvestmentSummaryRow(1, "investor-1"), BuildInvestmentSummaryRow(2, "investor-1")]]);
     mockQuery.mockImplementationOnce(async () => [[{ totalCount: 123 }]]);
 
-    const response = await supertest(app.callback()).post("/v1/investments/search").send({});
+    const response = await supertest(app.callback())
+      .post("/v1/investments/search")
+      .send({
+        investorIds: ["investor-1"],
+      });
 
     expect(response.status).toBe(200);
     expect(response.body).toEqual({
@@ -64,12 +68,12 @@ describe("dashboard", () => {
     });
     expect(mockQuery).toHaveBeenCalledTimes(2);
     expect(mockQuery).toHaveBeenNthCalledWith(1, {
-      sql: "SELECT id, investor_id, asset_class, amount, currency FROM investments_summary OFFSET ? LIMIT ?",
-      values: [0, 15],
+      sql: "SELECT id, investor_id, asset_class, amount, currency FROM investments_summary WHERE investor_id IN (?) LIMIT ? OFFSET ?",
+      values: [["investor-1"], 15, 0],
     });
     expect(mockQuery).toHaveBeenNthCalledWith(2, {
-      sql: "SELECT COUNT(*) AS totalCount FROM (SELECT id, investor_id, asset_class, amount, currency FROM investments_summary) AS subquery",
-      values: [],
+      sql: "SELECT COUNT(*) AS totalCount FROM (SELECT id, investor_id, asset_class, amount, currency FROM investments_summary WHERE investor_id IN (?)) AS subquery",
+      values: [["investor-1"]],
     });
   });
 
@@ -102,8 +106,8 @@ describe("dashboard", () => {
     });
     expect(mockQuery).toHaveBeenCalledTimes(2);
     expect(mockQuery).toHaveBeenNthCalledWith(1, {
-      sql: "SELECT id, investor_id, asset_class, amount, currency FROM investments_summary WHERE investor_id IN (?) OFFSET ? LIMIT ?",
-      values: [["investor-1"], 0, 15],
+      sql: "SELECT id, investor_id, asset_class, amount, currency FROM investments_summary WHERE investor_id IN (?) LIMIT ? OFFSET ?",
+      values: [["investor-1"], 15, 0],
     });
     expect(mockQuery).toHaveBeenNthCalledWith(2, {
       sql: "SELECT COUNT(*) AS totalCount FROM (SELECT id, investor_id, asset_class, amount, currency FROM investments_summary WHERE investor_id IN (?)) AS subquery",

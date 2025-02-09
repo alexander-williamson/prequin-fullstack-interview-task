@@ -4,6 +4,7 @@ import Koa, { Context, Next } from "koa";
 import bodyParser from "koa-bodyparser";
 import { configuration } from "./Configuration";
 import { GetDashboardHandler } from "./handlers/GetDashboardHandler";
+import { GetInvestorHandler } from "./handlers/GetInvestorHandler";
 import { PostInvestmentsSearchHandler } from "./handlers/PostInvestmentsSearchHandler";
 
 const app = new Koa();
@@ -20,6 +21,7 @@ app.use(async (ctx: Context, next: Next) => {
 // handlers
 const router = new Router({});
 router.get("/v1/dashboard", GetDashboardHandler());
+router.get("/v1/investors/:id", GetInvestorHandler());
 router.post("/v1/investments/search", PostInvestmentsSearchHandler());
 app.use(router.routes()).use(router.allowedMethods());
 
