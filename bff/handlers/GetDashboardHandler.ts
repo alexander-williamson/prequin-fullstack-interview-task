@@ -24,5 +24,12 @@ export function GetDashboardHandler(): Middleware {
 }
 
 type ResponseBody = {
-  investors: { id: string; name: string; type: string; dateAdded: Date; lastUpdated: Date; totalCommitments: number }[];
+  investors: {
+    id: string;
+    name: string;
+    type: string;
+    dateAdded: Date;
+    lastUpdated: Date;
+    totalCommitments: number;
+  }[];
 };
