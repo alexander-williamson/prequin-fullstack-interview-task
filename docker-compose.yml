@@ -1,0 +1,49 @@
+# docker-compose.yml
+services:
+  bff:
+    build:
+      context: ./bff
+      dockerfile: Dockerfile
+      target: dev
+    environment:
+      NODE_ENV: local
+      ORIGIN: localhost
+      PORT: 3001
+      DATABASE_HOST: mysql
+      DATABASE_USERNAME: mysql_user
+      DATABASE_PASSWORD: 1bTcWCQLGFRESiuRWlRE
+      DATABASE_NAME: prequin
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./bff:/app
+      - /app/node_modules
+  website:
+    build:
+      context: ./website
+      dockerfile: Dockerfile
+      target: dev
+    environment:
+      NODE_ENV: development
+      WATCHPACK_POLLING: true
+      BFF_BASE_URL: http://localhost:3001
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./website:/app
+      - /app/node_modules
+  mysql:
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: pu51hpj0pk6opIaYGHqoAg
+      MYSQL_USER: mysql_user
+      MYSQL_PASSWORD: 1bTcWCQLGFRESiuRWlRE
+      MYSQL_DATABASE: prequin
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
