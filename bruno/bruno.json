@@ -1,0 +1,6 @@
+{
+  "version": "1",
+  "name": "prequin-fullstack-interview-task",
+  "type": "collection",
+  "ignore": ["node_modules", ".git"]
+}
