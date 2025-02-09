@@ -1,20 +1,18 @@
 import { GetDashboardResponseBody } from "@/hooks/types";
-import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
 import moment from "moment";
-import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
+import Link from "next/link";
 import numeral from "numeral";
 import Skeleton from "react-loading-skeleton";
-import Link from "next/link";
+import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
-export default function InvestmentsTable({ data, isLoading }: { data?: GetDashboardResponseBody; isLoading: boolean }) {
+export default function InvestorsTable({ data, isLoading }: { data?: GetDashboardResponseBody; isLoading: boolean }) {
   return (
     <Table>
       <TableCaption>{isLoading ? "Loading... " : `Showing ${data?.investors.length} items`}</TableCaption>
       <TableHeader>
         <TableRow>
-          <TableHead hidden={false} className="w-[100px]">
-            Id
-          </TableHead>
+          <TableHead className="w-[100px]">Id</TableHead>
           <TableHead>Name</TableHead>
           <TableHead>Type</TableHead>
           <TableHead>Date Added</TableHead>
@@ -34,7 +32,9 @@ export default function InvestmentsTable({ data, isLoading }: { data?: GetDashbo
         {!isLoading &&
           data?.investors.map((item) => (
             <TableRow key={item.id}>
-              <TableCell hidden={false}>{item.id}</TableCell>
+              <TableCell hidden={false} className="w-[100px]">
+                {item.id}
+              </TableCell>
               <TableCell>{item.name}</TableCell>
               <TableCell>{item.type}</TableCell>
               <TableCell>
@@ -54,7 +54,7 @@ export default function InvestmentsTable({ data, isLoading }: { data?: GetDashbo
                 </Tooltip>
               </TableCell>
               <TableCell className="text-right">
-                <Link href={`investors/${item.id}/investments`}>
+                <Link href={`investors/${item.id}`}>
                   <Tooltip>
                     <TooltipTrigger>{numeral(item.totalCommitments).format("0.0a")}</TooltipTrigger>
                     <TooltipContent>
@@ -72,7 +72,7 @@ export default function InvestmentsTable({ data, isLoading }: { data?: GetDashbo
 function BuildSkeletonRow() {
   return (
     <TableRow>
-      <TableCell hidden={false}></TableCell>
+      <TableCell></TableCell>
       <TableCell>
         <Skeleton />
       </TableCell>

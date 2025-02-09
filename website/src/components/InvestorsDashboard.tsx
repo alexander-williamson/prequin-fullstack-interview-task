@@ -1,14 +1,14 @@
 "use client";
 
 import { useDashboardData } from "@/hooks/useDashboardData";
-import InvestmentsTable from "./InvestmentsTable";
+import InvestorsTable from "./InvestorsTable";
 
 export default function InvestorsDashboard() {
-  const { isPending, error, data } = useDashboardData();
+  const { isPending, data } = useDashboardData();
   return (
     <div>
       <h2>Investors Dashboard</h2>
-      <InvestmentsTable data={data} isLoading={isPending} />
+      <InvestorsTable data={data} isLoading={isPending} />
     </div>
   );
 }
