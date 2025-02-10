@@ -1,3 +1,5 @@
+"use client";
+
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { PostInvestmentsSearchRequestBody, PostInvestmentsSearchResponseBody } from "@/hooks/types";

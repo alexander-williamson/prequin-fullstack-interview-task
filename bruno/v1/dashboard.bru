@@ -9,3 +9,7 @@ get {
   body: none
   auth: none
 }
+
+script:post-response {
+  bru.setVar("investor-id", res.body.investors[1].id);
+}
