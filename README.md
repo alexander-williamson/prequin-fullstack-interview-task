@@ -67,9 +67,9 @@ Viewing Commitments for an Investor - http://localhost:3000/investors/{id}
 
 ![investments](investments.png)
 
-[playwright]: "https://playwright.dev/"
-[nextjs]: "https://nextjs.org/"
-[koa]: "https://koajs.com/"
-[bff]: "https://aws.amazon.com/blogs/mobile/backends-for-frontends-pattern/"
-[fluentmigrator]: "https://fluentmigrator.github.io/"
-[crossenv]: "https://www.npmjs.com/package/cross-env"
+[playwright]: https://playwright.dev/
+[nextjs]: https://nextjs.org/
+[koa]: https://koajs.com/
+[bff]: https://aws.amazon.com/blogs/mobile/backends-for-frontends-pattern/
+[fluentmigrator]: https://fluentmigrator.github.io/
+[crossenv]: https://www.npmjs.com/package/cross-env
